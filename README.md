@@ -3,7 +3,29 @@
 ## Overview
 This project implements a fully connected neural network (FCNN) for emotion classification using the Emotion Dataset from Hugging Face. The model classifies text into six emotional categories: sadness, joy, love, anger, fear, and surprise.
 
-## Project Structure
+## 📑 Table of Contents
+- [Fully Connected Neural Network for Emotion Classification](#fully-connected-neural-network-for-emotion-classification)
+  - [Overview](#overview)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [📁 Project Structure](#-project-structure)
+  - [📊 Dataset](#-dataset)
+  - [🔍 Text Preprocessing](#-text-preprocessing)
+  - [🧠 Model Architecture](#-model-architecture)
+  - [⚙️ Training Details](#️-training-details)
+  - [🚀 Installation](#-installation)
+    - [Prerequisites](#prerequisites)
+    - [Steps](#steps)
+  - [🛠️ Usage](#️-usage)
+    - [📥 Data Preparation](#-data-preparation)
+    - [🏋️ Train the Model](#️-train-the-model)
+    - [🔍 Test the Model](#-test-the-model)
+  - [📈 Performance](#-performance)
+  - [📋 Requirements](#-requirements)
+  - [👥 Contributing](#-contributing)
+  - [📄 License](#-license)
+  - [🙏 Acknowledgments](#-acknowledgments)
+
+## 📁 Project Structure
 ```
 fully_connected_neural_network/
 │
@@ -30,18 +52,18 @@ fully_connected_neural_network/
 └── README.md              # Project documentation
 ```
 
-## Dataset
+## 📊 Dataset
 This project uses the [Emotion Dataset](https://huggingface.co/datasets/dair-ai/emotion) from Hugging Face, which contains text samples labeled with six emotions:
-- Sadness
-- Joy
-- Love
-- Anger
-- Fear
-- Surprise
+- 😢 Sadness
+- 😄 Joy
+- ❤️ Love
+- 😠 Anger
+- 😨 Fear
+- 😲 Surprise
 
 The dataset contains approximately 20,000 labeled text samples across training, validation, and test sets.
 
-## Text Preprocessing
+## 🔍 Text Preprocessing
 The preprocessing pipeline includes:
 - Lemmatization: Reducing words to their base form
 - Lowercase conversion: Converting all text to lowercase
@@ -50,7 +72,7 @@ The preprocessing pipeline includes:
 
 The processed text is then vectorized using TF-IDF (Term Frequency-Inverse Document Frequency) vectorization, which converts the text into numerical features based on word importance.
 
-## Model Architecture
+## 🧠 Model Architecture
 The model is a fully connected neural network with the following architecture:
 
 ![FCNN Architecture](https://via.placeholder.com/1192x400?text=FCNN+Architecture)
@@ -64,7 +86,7 @@ The model is a fully connected neural network with the following architecture:
 
 The model uses the SELU (Scaled Exponential Linear Unit) activation function, which helps with self-normalizing properties and can lead to better convergence during training.
 
-## Training Details
+## ⚙️ Training Details
 - Loss function: Categorical Cross Entropy
 - Optimizer: Adam
 - Learning rate: Starts at 0.001 with step decay (halves every 10 epochs)
@@ -73,7 +95,7 @@ The model uses the SELU (Scaled Exponential Linear Unit) activation function, wh
 - Batch size: 256
 - Maximum epochs: 20
 
-## Installation
+## 🚀 Installation
 
 ### Prerequisites
 - Python 3.8+
@@ -102,9 +124,9 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_md
 ```
 
-## Usage
+## 🛠️ Usage
 
-### Data Preparation
+### 📥 Data Preparation
 Download and preprocess the dataset:
 ```bash
 python data_preparation.py
@@ -114,7 +136,7 @@ This script will:
 - Process the text data (lemmatization, stop word removal, etc.)
 - Save the processed data as parquet files in the `data/` directory
 
-### Train the Model
+### 🏋️ Train the Model
 Train the FCNN model on the preprocessed data:
 ```bash
 python model_trainer.py
@@ -127,14 +149,14 @@ This script will:
 - Evaluate the model on the test set
 - Save the trained model to `model/fcnn.keras`
 
-### Test the Model
+### 🔍 Test the Model
 Test the trained model on new text inputs:
 ```bash
 python test_model.py
 ```
 By default, this script tests the model with the text "Sometimes i get lost in my thoughts and i feel so scared". You can modify the `phrase` variable in the script to test with other text examples.
 
-## Performance
+## 📈 Performance
 The model's performance metrics (accuracy, precision, recall, F1-score) are evaluated on the test dataset and displayed after training. Typical performance for this architecture shows:
 
 - Overall accuracy: ~85-90%
@@ -144,7 +166,7 @@ The model's performance metrics (accuracy, precision, recall, F1-score) are eval
 
 The confusion matrix helps visualize which emotions are most often misclassified and which ones the model predicts with highest confidence.
 
-## Requirements
+## 📋 Requirements
 - Python 3.8+
 - TensorFlow 2.19.0
 - scikit-learn 1.6.1
@@ -152,8 +174,8 @@ The confusion matrix helps visualize which emotions are most often misclassified
 - numpy 2.1.3
 - spaCy 3.8.4 (with 'en_core_web_md' model)
 - matplotlib 3.10.1
-****
-## Contributing
+
+## 👥 Contributing
 Contributions to improve the model architecture, preprocessing, or add new features are welcome! Please feel free to submit a pull request.
 
 1. Fork the repository
@@ -162,10 +184,10 @@ Contributions to improve the model architecture, preprocessing, or add new featu
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
+## 📄 License
 [MIT License](LICENSE)
 
-## Acknowledgments
+## 🙏 Acknowledgments
 - [dair-ai](https://github.com/dair-ai) for providing the emotion dataset
 - [SpaCy](https://spacy.io/) for natural language processing utilities
 - [TensorFlow](https://www.tensorflow.org/) and [Keras](https://keras.io/) for the deep learning framework
