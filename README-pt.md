@@ -186,7 +186,7 @@ Contribuições para melhorar a arquitetura do modelo, o pré-processamento ou a
 3. Faça commit das suas alterações (`git commit -m 'Add some amazing feature'`)
 4. Envie para a branch (`git push origin feature/amazing-feature`)
 5. Abra um Pull Request
-
+****
 ## 📄 Licença
 [Licença MIT](LICENSE)
 
