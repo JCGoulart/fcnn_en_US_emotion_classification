@@ -45,6 +45,7 @@ fully_connected_neural_network/
 │   ├── preprocessing.py   # Text preprocessing functions
 │   └── training_plot.py   # Training visualization utilities
 │
+├── explore_data.ipynb     # Notebook for EDA
 ├── data_preparation.py    # Script for data downloading and preprocessing
 ├── model_trainer.py       # Script for model training and evaluation
 ├── test_model.py          # Script for testing the model on new data
