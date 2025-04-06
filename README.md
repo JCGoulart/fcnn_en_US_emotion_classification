@@ -104,8 +104,10 @@ The model uses the SELU (Scaled Exponential Linear Unit) activation function, wh
 ### Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/fully_connected_neural_network.git
-cd fully_connected_neural_network
+git clone https://github.com/yourusername/fcnn_en_US_emotion_classification.git
+
+cd fcnn_en_US_emotion_classification
+
 ```
 
 2. Create and activate a virtual environment (optional but recommended):
