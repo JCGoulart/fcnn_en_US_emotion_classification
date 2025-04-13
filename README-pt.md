@@ -62,7 +62,7 @@ Este projeto utiliza o [Emotion Dataset](https://huggingface.co/datasets/dair-ai
 - 😨 Medo
 - 😲 Surpresa
 
-O conjunto de dados contém aproximadamente 20.000 amostras de texto rotuladas, divididas em conjuntos de treinamento, validação e teste.
+O conjunto de dados contém aproximadamente 20.000 amostras rotuladas divididas em conjuntos de treinamento, validação e teste.
 
 ## 🔍 Pré-processamento de Texto
 O pipeline de pré-processamento inclui:
@@ -160,7 +160,7 @@ python test_model.py
 Por padrão, este script testa o modelo com o texto "Sometimes i get lost in my thoughts and i feel so scared". Você pode modificar a variável `phrase` no script para testar com outros exemplos de texto.
 
 ## 📈 Desempenho
-As métricas de desempenho do modelo (precisão, recall, F1-score) são avaliadas no conjunto de teste e exibidas após o treinamento. O desempenho típico para esta arquitetura apresenta:
+As métricas de desempenho do modelo (precisão, recall, F1-score) são avaliadas no conjunto de teste e exibidas após o treinamento. O desempenho típico para esta arquitetura mostra:
 
 - Precisão geral: ~85-90%
 - Precisão e recall variam por classe emocional, com emoções comuns como alegria e tristeza geralmente apresentando melhores métricas do que emoções menos comuns como surpresa
@@ -171,12 +171,16 @@ A matriz de confusão ajuda a visualizar quais emoções são mais frequentement
 
 ## 📋 Requisitos
 - Python 3.8+
-- TensorFlow 2.19.0
-- scikit-learn 1.6.1
-- pandas 2.2.3
-- numpy 2.1.3
-- spaCy 3.8.4 (com o modelo 'en_core_web_md')
-- matplotlib 3.10.1
+- TensorFlow
+- scikit-learn
+- pandas
+- numpy
+- spaCy (com o modelo 'en_core_web_md')
+- matplotlib
+- joblib
+- pyarrow (para ler arquivos parquet)
+
+*(Verifique `requirements.txt` para versões específicas)*
 
 ## 👥 Contribuindo
 Contribuições para melhorar a arquitetura do modelo, o pré-processamento ou adicionar novos recursos são bem-vindas! Sinta-se à vontade para enviar um pull request.
@@ -186,7 +190,7 @@ Contribuições para melhorar a arquitetura do modelo, o pré-processamento ou a
 3. Faça commit das suas alterações (`git commit -m 'Add some amazing feature'`)
 4. Envie para a branch (`git push origin feature/amazing-feature`)
 5. Abra um Pull Request
-****
+
 ## 📄 Licença
 [Licença MIT](LICENSE)
 
@@ -195,4 +199,5 @@ Contribuições para melhorar a arquitetura do modelo, o pré-processamento ou a
 - [SpaCy](https://spacy.io/) por utilitários de processamento de linguagem natural
 - [TensorFlow](https://www.tensorflow.org/) e [Keras](https://keras.io/) pelo framework de aprendizado profundo
 - [Scikit-learn](https://scikit-learn.org/) por utilitários de aprendizado de máquina
-- [Netron](https://github.com/lutzroeder/netron) por visualização de modelos
+- [Hugging Face](https://huggingface.co/) pela plataforma de conjuntos de dados
+- [Netron](https://github.com/lutzroeder/netron) pela visualização de modelos
