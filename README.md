@@ -171,12 +171,16 @@ The confusion matrix helps visualize which emotions are most often misclassified
 
 ## 📋 Requirements
 - Python 3.8+
-- TensorFlow 2.19.0
-- scikit-learn 1.6.1
-- pandas 2.2.3
-- numpy 2.1.3
-- spaCy 3.8.4 (with 'en_core_web_md' model)
-- matplotlib 3.10.1
+- TensorFlow
+- scikit-learn
+- pandas
+- numpy
+- spaCy (with 'en_core_web_md' model)
+- matplotlib
+- joblib
+- pyarrow (to read parquet)
+
+*(Check `requirements.txt` for specific versions)*
 
 ## 👥 Contributing
 Contributions to improve the model architecture, preprocessing, or add new features are welcome! Please feel free to submit a pull request.
@@ -195,4 +199,5 @@ Contributions to improve the model architecture, preprocessing, or add new featu
 - [SpaCy](https://spacy.io/) for natural language processing utilities
 - [TensorFlow](https://www.tensorflow.org/) and [Keras](https://keras.io/) for the deep learning framework
 - [Scikit-learn](https://scikit-learn.org/) for machine learning utilities
+- [Hugging Face](https://huggingface.co/) for the datasets platform
 - [Netron](https://github.com/lutzroeder/netron) for model visualization
